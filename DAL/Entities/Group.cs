@@ -2,7 +2,7 @@
 
 namespace DAL.Entities
 {
-    class Group
+    public class Group
     {
         public int GroupId { get; set; }
         public string Name { get; set; }

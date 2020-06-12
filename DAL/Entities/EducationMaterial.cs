@@ -1,6 +1,6 @@
 ﻿namespace DAL.Entities
 {
-    class EducationMaterial
+    public class EducationMaterial
     {
         public int EducationMaterialId { get; set; }
         public string Name { get; set; }

@@ -2,7 +2,7 @@
 
 namespace DAL.Entities
 {
-    class Desk
+    public class Desk
     {
         public int DeskId { get; set; }
         public string Name { get; set; }

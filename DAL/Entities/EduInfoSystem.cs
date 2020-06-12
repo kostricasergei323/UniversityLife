@@ -2,7 +2,7 @@
 
 namespace DAL.Entities
 {
-    class EduInfoSystem
+    public class EduInfoSystem
     {
         public List<Desk> InformationDesks { get; set; }
         public List<Group> UserGroups { get; set; }
