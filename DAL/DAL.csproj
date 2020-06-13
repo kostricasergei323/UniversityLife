@@ -9,9 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Impl\" />
     <Folder Include="UnitOfWork\" />
-    <Folder Include="EF\" />
   </ItemGroup>
 
 </Project>

@@ -2,12 +2,12 @@
 {
     public class User
     {
-        public int UserId { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public SystemRole Role { get; set; }
+        private int UserId { get; set; }
+        private string Name { get; set; }
+        private string Surname { get; set; }
+        private string Login { get; set; }
+        private string Password { get; set; }
+        private SystemRole Role { get; set; }
 
         public User(int userId, string name, string surname, string login, string password, SystemRole role)
         {

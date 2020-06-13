@@ -2,10 +2,10 @@
 {
     public class EducationMaterial
     {
-        public int EducationMaterialId { get; set; }
-        public string Name { get; set; }
-        public SystemRole Role { get; set; }
-        public string Content { get; set; }
+        private int EducationMaterialId { get; set; }
+        private string Name { get; set; }
+        private SystemRole Role { get; set; }
+        private string Content { get; set; }
 
         public EducationMaterial(int materialId, string name, SystemRole role, string content)
         {

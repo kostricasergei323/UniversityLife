@@ -4,10 +4,10 @@ namespace DAL.Entities
 {
     public class Group
     {
-        public int GroupId { get; set; }
-        public string Name { get; set; }
-        public SystemRole Role { get; set; }
-        public List<User> Users { get; set; }
+        private int GroupId { get; set; }
+        private string Name { get; set; }
+        private SystemRole Role { get; set; }
+        private List<User> Users { get; set; }
 
         public Group(int groupId, string name, SystemRole role, List<User> users)
         {

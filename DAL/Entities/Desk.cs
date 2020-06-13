@@ -4,9 +4,9 @@ namespace DAL.Entities
 {
     public class Desk
     {
-        public int DeskId { get; set; }
-        public string Name { get; set; }
-        public List<EducationMaterial> Materials { get; set; }
+        private int DeskId { get; set; }
+        private string Name { get; set; }
+        private List<EducationMaterial> Materials { get; set; }
 
         public Desk(int deskId, string name, List<EducationMaterial> materials)
         {

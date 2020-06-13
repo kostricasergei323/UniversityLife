@@ -4,10 +4,10 @@ namespace DAL.Entities
 {
     public class SystemRole
     {
-        public int SystemRoleId { get; set; }
-        public string Name { get; set; }
+        private int SystemRoleId { get; set; }
+        private string Name { get; set; }
 
-        public RoleType Role { get; set; }
+        private RoleType Role { get; set; }
 
         public SystemRole(int roleId, string name, RoleType role)
         {
