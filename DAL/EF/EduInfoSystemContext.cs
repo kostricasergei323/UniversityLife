@@ -6,11 +6,11 @@ using System.Text;
 
 namespace DAL.EF
 {
-    class EduInfoSystemContext
+    public class EduInfoSystemContext
         : DbContext
     {
         public DbSet<EduInfoSystem> Campus { get; set; }
-        public DbSet<SystemRole> Orders { get; set; }
+        public DbSet<EducationMaterial> Materials { get; set; }
 
         public EduInfoSystemContext(DbContextOptions options)
             : base(options)
