@@ -10,9 +10,43 @@ namespace DAL.Entities
         public string Name { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public SystemRole UserRole { get; set; }
+        private SystemRole UserRole { get; set; }
+        public User()
+        { }
+        public User(SystemRole role)
+        {
+            this.SetUserRole(role);
+        }
+        public void SetUserRole(SystemRole role)
+        {
+            this.UserRole = role;
+        }
+        public SystemRole GetUserRole()
+        {
+            return this.UserRole;
+        }
     }
+    public abstract class UserDecorator: User
+    {
+        protected User user;
 
+        public UserDecorator(SystemRole role, User user): base(role)
+        {
+            this.user = user;
+        }
+    }
+    public class ModeratorUser: UserDecorator
+    {
+        public ModeratorUser(User u)
+            : base(SystemRole.Moderator, u)
+        { }
+    }
+    public class AdministratorUser: UserDecorator
+    {
+        public AdministratorUser(User u)
+            : base(SystemRole.Administrator, u)
+        { }
+    }
     public abstract class UserBuilder
     {
         public abstract void FillUserIdAndName(int userId, string name);
@@ -39,7 +73,7 @@ namespace DAL.Entities
 
         public override void FillUserRole(SystemRole userRole)
         {
-            user.UserRole = userRole;
+            user.SetUserRole(userRole);
         }
 
         public override User GetUser()
